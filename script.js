@@ -8,7 +8,7 @@ function validateConfig() {
     // Check required fields
     if (!config.valentineName) {
         warnings.push("Valentine's name is not set! Using default.");
-        config.valentineName = "My Love";
+        config.valentineName = "...";
     }
 
     // Validate colors
@@ -41,11 +41,11 @@ function validateConfig() {
 // Default color values
 function getDefaultColor(key) {
     const defaults = {
-        backgroundStart: "#ffafbd",
-        backgroundEnd: "#ffc3a0",
-        buttonBackground: "#ff6b6b",
-        buttonHover: "#ff8787",
-        textColor: "#ff4757"
+        backgroundStart: "#A1D2CE",
+        backgroundEnd: "#78CAD2",
+        buttonBackground: "#62A8AC",
+        buttonHover: "#5497A7",
+        textColor: "#50858B"
     };
     return defaults[key];
 }
@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
     validateConfig();
 
     // Set texts from config
-    document.getElementById('valentineTitle').textContent = `${config.valentineName}, my love...`;
+    document.getElementById('valentineTitle').textContent = `${config.valentineName}, ......`;
     
     // Set first question texts
     document.getElementById('question1Text').textContent = config.questions.first.text;
